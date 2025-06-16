@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+div{
+    margin: 25px;
+}
+body{
+    background-color: #1E1E1E;
+}
+h1, h2{
+    color: #477AA5; 
+    text-align: center;
+}
+h2{
+    color: #0EB072;
+}
+main{
+    color: #CACACA;
+}
+ul{
+    margin: 20px;
+}
+table{
+    margin: 20px;
+    border: 1px solid #477AA5 ;
+    border-collapse: separate;
+}
+td, th {
+    padding: 8px 15px;
+    border-collapse: separate;
+}
+ul, ol{
+    margin: 20px;
+}
+
+@media screen and (max-width: 768px) {
+   img{
+    width: 50%;
+   }
+    
+}
