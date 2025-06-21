@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Resumo do Conteúdo de CPI</h1>
+    </header>
+    <main>
+        <div>
+            <h2>Introdução</h2>
+            <br>
+            <h3>O que é CSS?</h3>
+            <p>
+                CSS (Cascading Style Sheets) é a linguagem usada para estilizar páginas web.<br>
+                Enquanto o HTML define o conteúdo (como títulos, parágrafos e imagens), o CSS define a aparência desse conteúdo — como cores, tamanhos, posições, espaçamento e layout.
+            </p>
+            <br>
+            <h3> Para que serve o CSS?</h3>
+            <p>O CSS permite:</p>
+            <ul>
+                <li>Alterar cores, fontes e fundos;</li>
+                <li>Posicionar elementos com precisão;</li>
+                <li>Criar layouts responsivos que se adaptam a celulares e tablets;</li>
+                <li>Aplicar animações e efeitos visuais modernos;</li>
+                <li>Separar conteúdo (HTML) de estilo (CSS), facilitando a manutenção.</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Conceitos Importantes</h2>
+            <ul>
+                <li><b>Cascata</b>: O CSS aplica regras com base em prioridades — estilos embutidos > internos > externos.</li>
+                <li><b>Seletores</b>: Definem quais elementos serão estilizados (por tag, id, classe etc.).</li>
+                <li><b>Box Model</b>: Todo elemento é uma "caixa" com conteúdo, padding, borda e margem.</li>
+                <li><b></b>Responsividade</b>: CSS pode adaptar a página a diferentes tamanhos de tela.</li>
+            </ul>
+        </div>
+        <div>
+            <h2> Como aplicar o CSS?</h2>
+            <p>Existem 3 formas de aplicar CSS em uma página:</p>
+            <ol>
+                <li><b>CSS Interno</b>: dentro da tag &lt;style&gt; no &lt;head&gt;</li>
+                <li><b>CSS Externo</b>: em um arquivo separado (.css) e importado com &lt;link&gt;</li>
+                <li><b>CSS Embutido</b>: direto no elemento com o atributo style</li>
+            </ol>
+        </div>
+        <div>
+            <h2>Como funciona o CSS?</h2>
+            <br>
+            <p>O CSS é baseado em regras de estilo que seguem esta estrutura:</p>
+            <div>
+                <code>
+                    seletor {<br>
+                        propriedade: valor;<br>
+                    }
+                </code>
+            </div>
+            <ul>
+                <li><b>Seletor</b>: escolhe o elemento HTML a ser estilizado</li>
+                <li><b>Propriedade</b>: define o que será alterado (ex: cor, tamanho)</li>
+                <li><b>Valor</b>: define como será (ex: vermelho, 20px)</li>
+            </ul>
+            <br>
+            <p>Exemplo:</p>
+            <div>
+                <code>
+                    p {<br>
+                        color: red;<br>
+                        text-align: center;<br>
+                    }
+                </code>
+            </div>
+            <p>Esse código faz com que todos os parágrafos (&lt;p&gt;) fiquem vermelhos e centralizados.</p>
+        </div>
+        <div>
+            <h2>Seletores CSS</h2>
+            <p>Os seletores são o "caminho" usado pelo CSS para encontrar quais elementos HTML serão estilizados. Eles são a porta de entrada para aplicar regras visuais a qualquer parte da página.</p>
+            <br>
+            <h3>Tipos de Seletores mais comuns:</h3>
+            <br>
+            <h4> Seletor de elemento (tag)</h4>
+            <p>Estiliza todos os elementos de uma mesma tag:</p>
+            <div class="code">
+                <code>
+                    p {<br>
+                        color: blue;<br>
+                    }
+                </code>
+            </div>
+            <p>Todos os &lt;p&gt; da página ficarão azuis.</p>
+            <br>
+            <h4>Seletor de classe</h4>
+            <p>Aplica o estilo a qualquer elemento com class="nome". Use o ponto ".":</p>
+            <div class="code">
+                <code>
+                    .center {<br>
+                        text-align: center;<br>
+                    }
+                </code>
+            </div>
+            <p>Qualquer elemento com class="center" ficará centralizado.</p>
+            <br>
+            <h4>Seletor de ID</h4>
+            <p>Estiliza um único elemento com id="nome". Use a cerquilha(ou jogo da velha ou hashtag) "#":</p>
+            <div class="code">
+                <code>
+                    #menu {<br>
+                        background-color: #f5f5f5;<br>
+                    }
+                </code>
+            </div>
+            <br>
+            <h4>Seletor universal</h4>
+            <p>Aplica estilos a todos os elementos da página:</p>
+            <div class="code">
+                <code>
+                    * {<br>
+                        margin: 0;<br>
+                        padding: 0;<br>
+                    }
+                </code>
+            </div>
+            <br>
+            <h4>Seletor descendente</h4>
+            <p>Seleciona elementos dentro de outros:</p>
+            <div class="code">
+                <code>
+                    main p {<br>
+                        color: gray;<br>
+                    }
+                </code>
+            </div>
+            <p> Só aplica estilo aos &lt;p&gt; dentro de &lt;main&gt;.</p>
+            <br>
+            <h4>Seletor de pseudo-classes</h4>
+            <p>Estiliza estados específicos:</p>
+            <div class="code">
+                <code>
+                    a:hover {<br>
+                        color: red;<br>
+                    }
+                </code>
+            </div>
+            <br>
+            <p>O link muda de cor quando o mouse passa por cima.</p>
+            <br>
+            <h4>Seletor de pseudo-elementos</h4>
+            <p>Permite estilizar partes de um elemento:</p>
+            <div class="code">
+                <code>
+                    p::first-line {<br>
+                        font-weight: bold;<br>
+                    }
+                </code>
+            </div>
+        </div>
+        <div>
+            <h2>Box Model </h2>
+            <p>No CSS, todo elemento HTML é uma caixa invisível composta por 4 partes:</p>
+            <br>
+            <img src="boxmodel.webp" alt="boxmodel" id="boxmodel">
+            <br>
+            <h3>Componentes do Box Model:</h3>
+            <ul>
+                <li><b>Content (conteúdo)</b>: Onde fica o texto, imagem, etc.</li>
+                <li><b>Padding</b>: Espaço interno, entre o conteúdo e a borda.</li>
+                <li><b>Border</b>: Linha que envolve o padding e o conteúdo.</li>
+                <li><b>Margin</b>: Espaço externo, entre o elemento e outros ao redor.</li>
+            </ul>
+            <p><b>Exemplo:</b></p>
+            <div class="code">
+                <code>
+                    div {<br>
+                        width: 200px;<br>
+                        padding: 20px;<br>
+                        border: 5px solid black;<br>
+                        margin: 10px;<br>
+                    }
+                </code>
+            </div>
+            <p>
+                Largura final: 200 + 20 + 20 + 5 + 5 + 10 + 10 = 270px <br>
+            Você pode mudar isso com box-sizing: border-box, para que o tamanho final respeite a largura definida.
+        </p>
+        </div>
+        <div>
+            <h2>Responsividade</h2>
+            <br>
+            <p>Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela (celulares, tablets, desktops), mantendo usabilidade e boa aparência</p>
+            <br>
+            <h3>Como aplicar responsividade com CSS:</h3>
+            <br>
+            <h4>Viewport meta tag</h4>
+            <p>No &lt;head&gt; do HTML:</p>
+            <div class="code">
+                <code>
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                </code>
+            </div>
+            <br>
+            <h4>Media Queries</h4>
+            <br>
+            <p>Permitem aplicar estilos condicionalmente, conforme o tamanho da tela:</p>
+            <div class="code">
+                <code>
+                    /* Para telas com até 768px de largura (ex: celulares) */<br>
+                    @media screen and (max-width: 768px) {<br>
+                        body {<br>
+                            font-size: 16px;<br>
+                            padding: 10px;<br>
+                        }<br>
+
+                        .menu {<br>
+                            display: block;<br>
+                        }<br>
+                    }
+                </code>
+            </div>
+            <br>
+            <h4> Layouts flexíveis com Flexbox e Grid</h4>
+            <br>
+            <p>Evite larguras fixas em pixels. Prefira porcentagens ou unidades relativas:</p>
+            <div class="code">
+                <code>
+                    .container {<br>
+                        display: flex;<br>
+                        flex-wrap: wrap;<br>
+                    }br
+
+                    .card {<br>
+                    flex: 1 1 100%; /* ocupa toda a tela no mobile <br>
+                    }
+                </code>
+            </div>
+        </div>
+        <div>
+            <a href="index2.html" class="ant">Volte para a página anterior</a>
+        </div>
+
+    </main>
+    <footer></footer>
+</body>
+</html>
